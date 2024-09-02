@@ -5,40 +5,54 @@ import java.math.BigDecimal;
 
 public class Inputs {
 
+    private final String INPUT_CONFIG = "--config";
+    private final String INPUT_BETTING_AMOUNT = "--betting-amount";
+    private final String INPUT_HELP = "--help";
+
     private String _path;
     private BigDecimal _bettingAmount;
 
-    public void initialize(String[] inputs) {
-        for (int i = 0; i < inputs.length; i++) {
-            String current = inputs[i];
+    public boolean initialize(String[] inputs) {
+        try {
+            for (int i = 0; i < inputs.length; i++) {
+                String current = inputs[i];
 
-            if (current.equals("--config")) {
-                _path = inputs[++i];
-            } else if (current.equals("--betting-amount")) {
-                try {
-                    _bettingAmount = new BigDecimal(inputs[++i]);
-                } catch (NumberFormatException e) {
-                    System.err.println("Invalid betting amount: " + current);
+                if (current.equals(INPUT_CONFIG) && !inputs[i+1].equals(INPUT_BETTING_AMOUNT) && !inputs[i+1].equals(INPUT_HELP)) {
+                    _path = inputs[++i];
+                } else if (current.equals(INPUT_BETTING_AMOUNT)) {
+                    try {
+                        _bettingAmount = new BigDecimal(inputs[++i]);
+                    } catch (NumberFormatException e) {
+                        System.err.println("Invalid betting amount: " + current);
+                        return help();
+                    }
+                } else if (current.equals(INPUT_HELP)) {
+                    return help();
+                } else {
+                    System.out.println("Invalid argument: " + current);
+                    return help();
                 }
-            } else if (current.equals("--help")) {
-                help();
-            } else {
-                System.out.println("Invalid argument: " + current);
-                help();
             }
+
+            if (!validate()) {
+                return help();
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid arguments");
+            return help();
         }
 
-        if (!validate()) {
-            help();
-        }
+        return true;
     }
 
-    public void help() {
+    public boolean help() {
         System.out.println("Usage: java -jar scratch.jar [options]");
         System.out.println("Options:");
         System.out.println("  --config <path>            Path to config file");
         System.out.println("  --betting-amount <amount>  Betting amount");
         System.out.println("  --help                     Print this help");
+
+        return false;
     }
 
     public boolean validate() {

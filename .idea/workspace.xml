@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89b9f36-7566-4609-9129-1b21b1238d37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/cyberspeed/task/components/BoardAssessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cyberspeed/task/configs/ConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cyberspeed/task/utils/InputsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/components/BoardAssessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/components/BoardAssessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/components/Scratch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/components/Scratch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/CombinationGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/CombinationGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/CombinationMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/CombinationMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Coordinate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/ImpactType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/ImpactType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Probabilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/Probabilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/SymbolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/configs/SymbolType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cyberspeed/task/utils/Inputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cyberspeed/task/utils/Inputs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +25,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -83,19 +80,32 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.BoardAssessorTest.applyBonus_passDifferentValues_validateImpactType.executor": "Run",
+    "Gradle.BoardAssessorTest.applyBonus_passMatch_shouldWin.executor": "Run",
+    "Gradle.BoardAssessorTest.assess_passMatch_shouldWin.executor": "Run",
+    "Gradle.BoardAssessorTest.assess_passNoMatch_shouldFail.executor": "Run",
+    "Gradle.BoardAssessorTest.assess_passNoMatch_shouldHaveTwoCombinations.executor": "Run",
+    "Gradle.BoardAssessorTest.assess_passTwoDifferentSymbolsMatch_shouldHaveTwoCombinations.executor": "Run",
+    "Gradle.BoardAssessorTest.assess_passTwoSymbolsMatchAndMissReward_validateCombinationsAndReward.executor": "Run",
+    "Gradle.ConfigTest.sample.executor": "Run",
+    "Gradle.InputsTest.initialize_passCorrectValues_ValidateResult.executor": "Run",
+    "Gradle.InputsTest.initialize_passInCorrectValues_failsValidation.executor": "Run",
+    "Gradle.InputsTest.validate_passCorrectValues_shouldReturnTrue.executor": "Run",
+    "Gradle.InputsTest.validate_passNullValues_shouldReturnFalse.executor": "Run",
+    "Gradle.Tests in 'scratchgame.test'.executor": "Run",
     "Gradle.scratchgame [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/abe/Desktop/Projects/zTutorials/scratch",
+    "last_opened_file_path": "/home/abe/Desktop/Projects/zTutorials/scratchgame/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/abe/Desktop/Projects/zTutorials/scratchgame/docs/src/main/java/cyberspeed/task/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
@@ -104,26 +114,143 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/docs" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cyberspeed.task.Main" />
-      <module name="scratchgame.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cyberspeed.task.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.Tests in 'scratchgame.test'">
+    <configuration name="BoardAssessorTest.assess_passMatch_shouldWin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cyberspeed.task.components.BoardAssessorTest.assess_passMatch_shouldWin&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
+    <configuration name="BoardAssessorTest.assess_passNoMatch_shouldHaveTwoCombinations" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cyberspeed.task.components.BoardAssessorTest.assess_passNoMatch_shouldHaveTwoCombinations&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BoardAssessorTest.assess_passTwoDifferentSymbolsMatch_shouldHaveTwoCombinations" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cyberspeed.task.components.BoardAssessorTest.assess_passTwoDifferentSymbolsMatch_shouldHaveTwoCombinations&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BoardAssessorTest.assess_passTwoSymbolsMatchAndMissReward_validateCombinationsAndReward" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cyberspeed.task.components.BoardAssessorTest.assess_passTwoSymbolsMatchAndMissReward_validateCombinationsAndReward&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'scratchgame.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.BoardAssessorTest.assess_passMatch_shouldWin" />
+      <item itemvalue="Gradle.BoardAssessorTest.assess_passNoMatch_shouldHaveTwoCombinations" />
+      <item itemvalue="Gradle.BoardAssessorTest.assess_passTwoDifferentSymbolsMatch_shouldHaveTwoCombinations" />
+      <item itemvalue="Gradle.BoardAssessorTest.assess_passTwoSymbolsMatchAndMissReward_validateCombinationsAndReward" />
+      <item itemvalue="Gradle.Tests in 'scratchgame.test'" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.Tests in 'scratchgame.test'" />
+        <item itemvalue="Gradle.BoardAssessorTest.assess_passTwoSymbolsMatchAndMissReward_validateCombinationsAndReward" />
+        <item itemvalue="Gradle.BoardAssessorTest.assess_passTwoDifferentSymbolsMatch_shouldHaveTwoCombinations" />
+        <item itemvalue="Gradle.BoardAssessorTest.assess_passNoMatch_shouldHaveTwoCombinations" />
+        <item itemvalue="Gradle.BoardAssessorTest.assess_passMatch_shouldWin" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +271,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725194511038</updated>
       <workItem from="1725194512063" duration="15299000" />
-      <workItem from="1725256442097" duration="1128000" />
+      <workItem from="1725256442097" duration="12273000" />
     </task>
     <servers />
   </component>
