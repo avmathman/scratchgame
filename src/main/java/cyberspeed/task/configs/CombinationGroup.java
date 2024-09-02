@@ -1,5 +1,8 @@
 package cyberspeed.task.configs;
 
+/**
+ * @author abdurashid.vakhobov
+ */
 public enum CombinationGroup {
     SAME_SYMBOLS,
     HORIZONTALLY_LINEAR_SYMBOLS,

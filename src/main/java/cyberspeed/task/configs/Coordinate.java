@@ -2,6 +2,9 @@ package cyberspeed.task.configs;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
+/**
+ * @author abdurashid.vakhobov
+ */
 public record Coordinate(
         int row,
         int column

@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+/**
+ * @author abdurashid.vakhobov
+ */
 public record Probabilities(
         @JsonProperty("standard_symbols")
         List<Cell> standardSymbols,

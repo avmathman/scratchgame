@@ -15,15 +15,15 @@ public record Scratch(
         Config config
 ) {
     public ScratchBoard generate() {
-        boolean isBonus = config.getProbabilities().bonusSymbols() != null;
+        boolean isBonus = config.probabilities().bonusSymbols() != null;
 
-        String[][] board = new String[config.getRows()][config.getColumns()];
+        String[][] board = new String[config.rows()][config.columns()];
 
         String bonusSymbol = null;
 
-        for (Cell cell : config.getProbabilities().standardSymbols()) {
+        for (Cell cell : config.probabilities().standardSymbols()) {
             if (isBonus && new Random().nextBoolean()) {
-                bonusSymbol = new Bonus(config.getProbabilities().bonusSymbols()).next();   //save one look across the board
+                bonusSymbol = new Bonus(config.probabilities().bonusSymbols()).next();   //save one look across the board
                 board[cell.row()][cell.column()] = bonusSymbol;
                 isBonus = false;
             } else {

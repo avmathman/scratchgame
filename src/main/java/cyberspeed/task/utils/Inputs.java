@@ -5,18 +5,18 @@ import java.math.BigDecimal;
 
 public class Inputs {
 
-    private String path;
-    private BigDecimal bettingAmount;
+    private String _path;
+    private BigDecimal _bettingAmount;
 
     public void initialize(String[] inputs) {
         for (int i = 0; i < inputs.length; i++) {
             String current = inputs[i];
 
             if (current.equals("--config")) {
-                path = inputs[++i];
+                _path = inputs[++i];
             } else if (current.equals("--betting-amount")) {
                 try {
-                    bettingAmount = new BigDecimal(inputs[++i]);
+                    _bettingAmount = new BigDecimal(inputs[++i]);
                 } catch (NumberFormatException e) {
                     System.err.println("Invalid betting amount: " + current);
                 }
@@ -42,17 +42,17 @@ public class Inputs {
     }
 
     public boolean validate() {
-        if (path == null) {
+        if (_path == null) {
             System.err.println("Invalid! Config path is not specified");
             return false;
         } else {
-            if (!new File(path).exists()) {
-                System.err.println("Invalid! Config file does not exist: " + path);
+            if (!new File(_path).exists()) {
+                System.err.println("Invalid! Config file does not exist: " + _path);
                 return false;
             }
         }
 
-        if (bettingAmount == null || bettingAmount.signum() <= 0) {
+        if (_bettingAmount == null || _bettingAmount.signum() <= 0) {
             System.err.println("Invalid! Betting amount is not specified");
             return false;
         }
@@ -60,11 +60,11 @@ public class Inputs {
         return true;
     }
 
-    public String getPath() {
-        return path;
+    public String path() {
+        return _path;
     }
 
-    public BigDecimal getBettingAmount() {
-        return bettingAmount;
+    public BigDecimal bettingAmount() {
+        return _bettingAmount;
     }
 }

@@ -38,56 +38,43 @@ public class Config {
         this._winCombinations = winCombinations;
     }
 
-    /**
-     * Basic validation of config.
-     * @return true if config is valid
-     */
-    boolean isValid() {
-        return _columns > 0 && _rows > 0
-                && !_symbols.isEmpty()
-                && _probabilities != null
-                && !_probabilities.standardSymbols().isEmpty()
-                && _probabilities.standardSymbols().size() == _columns * _rows   //and we hope they cover all cells
-                && !_winCombinations.isEmpty();
-    }
-
-    public int getColumns() {
+    public int columns() {
         return _columns;
     }
 
-    public void setColumns(int _columns) {
+    public void columns(int _columns) {
         this._columns = _columns;
     }
 
-    public int getRows() {
+    public int rows() {
         return _rows;
     }
 
-    public void setRows(int _rows) {
+    public void rows(int _rows) {
         this._rows = _rows;
     }
 
-    public Map<String, Symbol> getSymbols() {
+    public Map<String, Symbol> symbols() {
         return _symbols;
     }
 
-    public void setSymbols(Map<String, Symbol> _symbols) {
+    public void symbols(Map<String, Symbol> _symbols) {
         this._symbols = _symbols;
     }
 
-    public Probabilities getProbabilities() {
+    public Probabilities probabilities() {
         return _probabilities;
     }
 
-    public void setProbabilities(Probabilities _probabilities) {
+    public void probabilities(Probabilities _probabilities) {
         this._probabilities = _probabilities;
     }
 
-    public Map<String, WinCombination> getWinCombinations() {
+    public Map<String, WinCombination> winCombinations() {
         return _winCombinations;
     }
 
-    public void setWinCombinations(Map<String, WinCombination> _winCombinations) {
+    public void winCombinations(Map<String, WinCombination> _winCombinations) {
         this._winCombinations = _winCombinations;
     }
 }

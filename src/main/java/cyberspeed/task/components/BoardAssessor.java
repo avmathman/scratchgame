@@ -13,17 +13,17 @@ import static java.math.BigDecimal.ZERO;
  */
 public class BoardAssessor {
 
-    private final Config config;
+    private final Config _config;
 
     private Map<String, List<String>> winningCombinations;
     private Map<String, BigDecimal> rewardMultipliers;
 
     public BoardAssessor(Config config) {
-        this.config = config;
+        this._config = config;
     }
 
     public ScratchBoard assess(ScratchBoard scratchBoard, BigDecimal bettingAmount) {
-        List<MatchResult> matched = new Matcher(config.getWinCombinations()).match(scratchBoard.matrix());
+        List<MatchResult> matched = new Matcher(_config.winCombinations()).match(scratchBoard.matrix());
         BigDecimal reward = ZERO;
 
         if (!matched.isEmpty()) {
@@ -59,7 +59,7 @@ public class BoardAssessor {
     public BigDecimal applyStandard(Map<String, BigDecimal> rewardMultipliers, BigDecimal reward) {
         BigDecimal rewardMultiplier = rewardMultipliers.keySet()
                 .stream()
-                .map(value -> config.getSymbols().get(value).rewardMultiplier().multiply(reward))
+                .map(value -> _config.symbols().get(value).rewardMultiplier().multiply(reward))
                 .reduce(BigDecimal::add)
                 .orElse(BigDecimal.ZERO);
 
@@ -67,7 +67,7 @@ public class BoardAssessor {
     }
 
     public BigDecimal applyBonus(String bonusSymbol, BigDecimal reward) {
-        Symbol symbol = config.getSymbols().get(bonusSymbol);
+        Symbol symbol = _config.symbols().get(bonusSymbol);
 
         switch (symbol.impact()) {
             case MULTIPLY_REWARD:

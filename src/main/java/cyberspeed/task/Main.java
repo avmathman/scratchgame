@@ -9,7 +9,6 @@ import cyberspeed.task.configs.Config;
 import cyberspeed.task.utils.Inputs;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
@@ -17,7 +16,7 @@ public class Main {
         String[] temp = new String[4];
 
         temp[0] = "--config";
-        temp[1] = "./docs/a/config.json";
+        temp[1] = "./docs/config.json";
         temp[2] = "--betting-amount";
         temp[3] = "100";
 
@@ -30,11 +29,11 @@ public class Main {
                 .build();
 
         try {
-            Config config = mapper.readValue(new File(inputs.getPath()), Config.class);
-            config.setRows(config.getRows() - 1);
-            config.setColumns(config.getColumns() - 1);
+            Config config = mapper.readValue(new File(inputs.path()), Config.class);
+            config.rows(config.rows() - 1);
+            config.columns(config.columns() - 1);
 
-            ScratchBoard result = new Scratch(config).scratch(inputs.getBettingAmount());
+            ScratchBoard result = new Scratch(config).scratch(inputs.bettingAmount());
 
             mapper.writerWithDefaultPrettyPrinter().writeValue(System.out, result);
         } catch (IOException e) {
